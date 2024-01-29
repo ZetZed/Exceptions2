@@ -1,7 +1,7 @@
 package Exceptions.Exceptions2.Application;
 
 import Exceptions.Exceptions2.Model.Entities.Account;
-import Exceptions.Exceptions2.Model.Exceptions.DomainException;
+import Exceptions.Exceptions2.Model.Exceptions.BusinessException;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class Program {
             account.withdraw(sc.nextDouble());
             System.out.println(account);
         }
-        catch (DomainException e){
+        catch (BusinessException e){
             System.out.println("Withdraw error: " + e.getMessage());
         }
         catch (Exception e){
